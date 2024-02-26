@@ -1,0 +1,49 @@
+body{
+	
+	& img:not(.complete){
+		font-size: 0;
+		display: inline-block;
+		background-color: #ccc;
+		background: linear-gradient(to right, #ccc, #efefef, #ccc);
+		background-size: 300px 100%;
+		animation: loading 1s linear infinite;
+		background-position: left center;
+	}
+
+	& section{
+		overflow-x: hidden;
+
+	}
+
+	& .underline{
+		border-bottom: 3px solid $primary;
+	}
+
+	& .margin-bottom{
+		margin-bottom: $gutter-width;
+	}
+
+	& .round{
+		border-radius: clamp(5px, 3vw, 16px);
+	}
+
+	& .bttn{
+		display: inline-block;
+		white-space: nowrap;
+		line-height: 3em;
+		padding: 0 3em;
+		background-color: $secondary;
+		color: #fff;
+		transition: background-color .2s;
+
+		&:hover{
+			background-color: lighten($secondary, 10);
+		}
+	}
+}
+
+@keyframes loading{
+	to{
+		background-position: 300px 100%;
+	}
+}

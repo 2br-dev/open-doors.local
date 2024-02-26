@@ -1,0 +1,96 @@
+header{
+    
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(#fff, .8);
+    backdrop-filter: blur(10px);
+
+    & .container{
+
+        & .row{
+            margin: 0;
+        }
+
+        & nav{
+
+            display: flex;
+            justify-content: space-between;
+            padding: clamp(10px, 2vw, 20px) 0;
+
+            & .logo-wrapper{
+
+                display: flex;
+                align-items: center;
+                width: fit-content;
+
+                @media(max-width: $large){
+                    width: 100%;
+                    justify-content: space-between;
+                }
+
+                & .burger{
+                    display: block;
+                    height: 40px;
+                    aspect-ratio: 1 / 1;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 24px;
+                    color: $primary;
+                }
+
+                & .logo{
+
+                    display: block;
+                    height: 55px;
+                    aspect-ratio: 4.5 / 1;
+                    flex-shrink: 0;
+                    background-image: url(/img/logo.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                    @media(max-width: $small){
+                        height: 40px;
+                    }
+                }
+
+                // & .logo{
+                //     border: 1px solid black;
+                //     display: block;
+                //     aspect-ratio: 5 / 1;
+                // }
+            }
+
+            & ul{
+
+                margin: 0;
+                display: flex;
+
+                & li{
+
+                    & a{
+                        display: block;
+                        line-height: 2em;
+                        padding: 0 1em;
+                        border-radius: 1em;
+                        color: $text;
+                        transition: box-shadow .2s, color .2s;
+                        
+                        &.outline{
+                            box-shadow: 0 0 0 1px $text inset;
+                        }
+
+                        &:hover{
+                            color: $secondary;
+                            
+                            &.outline{
+                                box-shadow: 0 0 0 1px $secondary inset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,451 @@
+main#main{
+
+	& section{
+		padding: 4vmax 0;
+
+		&#hero{
+			
+			& .base-wrapper{
+				width: 100%;
+				position: relative;
+				transform-style: preserve-3d;
+				perspective: 20px;
+
+				& img{
+					width: 100%;
+                    position: static !important;
+				}
+
+				& .level{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-size: contain;
+
+					&#l1{
+						background-image: url(/img/level1.svg);
+						transform: translateZ(2px) scale(.9);
+					}
+
+					&#l2{
+						background-image: url(/img/level2.svg);
+						transform: translateZ(4px) scale(.8);
+					}
+					
+					&#l3{
+						background-image: url(/img/level3.svg);
+						transform: translateZ(6px) scale(.7);
+					}
+				}
+			}
+		}
+
+		&#about{
+
+			& h3{
+				color: $primary;
+				font-weight: 400;
+				
+				@media(max-width: $large){
+					margin-top: 0;
+				}
+			}
+
+			& img{
+				width: clamp(50px, 5vw, 70px);
+			}
+		}
+
+        &#program{
+
+			background-color: $primary;
+			background-image: url('/img/pattern.svg');
+			background-size: 40vmax auto;
+			color: #fff;
+
+			& .underline{
+				border-color: #fff;
+			}
+
+			& .program-scroll{
+				padding: 10px;
+				padding-bottom: 50px;
+				box-sizing: border-box;
+
+				& .program-scroll-entry{
+
+					padding-right: 100px;
+					position: relative;
+					width: 600px;
+					box-sizing: border-box;
+					
+					@media(max-width: $medium){
+						flex-direction: column-reverse;
+						width: unset;
+						padding-right: 0;
+					}
+
+					& .ps-image{
+
+						& img{
+							border-radius: clamp(5px, 2vw, 15px);
+							display: block;
+						}
+					}
+
+					& .ps-info{
+					
+						padding: 20px 0;
+						position: relative;
+						box-sizing: border-box;
+						width: calc(100% - 40px);
+						
+						@media(min-width: $extra-large){
+							margin-left: 40px;
+							padding: 20px 30px;
+
+							&:before{
+								content: '';
+								display: block;
+								border-left: 2px solid #fff;
+								position: absolute;
+								height:70%;
+								top: 0;
+								left: 0;
+							}
+						}
+						
+						& h3{
+							margin-top: 0;
+							font-weight: 400;
+						}
+
+						& ul{
+							padding-left: 1em;
+						}
+						
+					}
+				}
+				
+			}
+
+			& .scrollbar-wrapper{
+
+				position: relative;
+
+				& .program-scrollbar{
+					position: absolute;
+					bottom: 10px;
+					left: 50%;
+					width: calc(50%);
+					transform: translateX(-50%);
+					height: 10px;
+					border-radius: 10px;
+					z-index: 2;
+					background: rgba(black, .4);
+
+					& .swiper-scrollbar-drag{
+						background: #fff;
+						height: 100%;
+						border-radius: 10px;
+					}
+				}
+			}
+
+        }
+
+		&#reasons{
+
+			& .line{
+				background-image: url(/img/reasons_bg.svg);
+				background-position: top center;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				@media(max-width: $medium){
+					background-size: auto 200px;
+				}
+			}
+
+			& img{
+				width: 80%;
+				display: block;
+				margin: auto;
+			}
+		}
+
+		&#figital{
+
+			& .container{
+				
+				background-color: $secondary;
+				color: #fff;
+				border-radius: clamp(5px, 2vw, 16px);
+				background-image: url(/img/figital.png);
+				background-position: right -5% top 25%;
+				background-size: 30% auto;
+				background-repeat: no-repeat;
+
+				@media(min-width: $extra-large){
+					background-size: 30% auto;
+					background-position: right -80px top 20%;
+				}
+
+				@media(max-width: $extra-large){
+					background-size: 40% auto;
+					background-position: right -80px top 20%;
+				}
+				
+				@media(max-width: $medium){
+					background-size: 50% auto;
+					background-position: right -80px top 20%;
+				}
+
+				@media(max-width: $small){
+					padding-bottom: 170px;
+					background-position: bottom -120px right -30px;
+					background-size: 400px auto;
+				}
+
+				@media(max-width: $extra-small){
+					background-size: 300px auto;
+					padding-bottom: 130px;
+					background-position: bottom -70px right -30px;
+				}
+
+				& .col{
+
+					padding: clamp(5px, 3vw, 30px);
+
+					& h2{
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		&#merch{
+
+			& .container{
+
+				border: 1px solid #ccc;
+				border-radius: clamp(5px, 2vw, 16px);
+				padding: clamp(5px, 3vw, 30px);
+				background-image: url(/img/merch.jpg);
+				background-size: 35% auto;
+				background-repeat: no-repeat;
+				background-position: bottom right -2px;
+
+				@media(min-width: $huge){
+					background-size: contain;
+				}
+
+				@media(max-width: $extra-large){
+					background-size: 45% auto;
+				}
+
+				@media(max-width: $large){
+					background-size: 45% auto;
+				}
+
+				@media(max-width: $medium){
+					padding-bottom: 50vw;
+					background-size: 50vw auto;
+				}
+
+				@media(max-width: $small){
+					padding-bottom: 80vw;
+					background-size: 80vw auto;
+				}
+
+				& h2{
+					margin: 0;
+				}
+
+				& .points{
+					
+					display: flex;
+					padding: 0;
+					list-style: none;
+					margin-bottom: 0;
+					flex-wrap: wrap;
+					
+					& li{
+
+						margin: 0;
+						counter-increment: li;
+						display: flex;
+						flex-direction: column;
+						width: 1px;
+						flex-grow: 1;
+						position: relative;
+						margin-bottom: $gutter-width;
+						margin-right: $gutter-width;
+
+						@media(max-width: $large){
+							width: calc(50% - #{$gutter-width});
+						}
+
+						@media(max-width: $medium){
+							width: calc(50% - #{$gutter-width});
+							margin-right: 0;
+						}
+
+						@media(max-width: $small){
+							width: 100%;
+						}
+
+						$size: 48px;
+
+						&:before{
+							content: counter(li);
+							border: 2px solid $primary;
+							color: $primary;
+							height: $size;
+							width: $size;
+							line-height: $size;
+							font-size: 30px;
+							text-align: center;
+							border-radius: 50%;
+							margin-bottom: $gutter-width;
+						}
+
+						&:not(:last-of-type){
+
+							&:after{
+								content: '';
+								display: block;
+								border-top: 2px solid $primary;
+								position: absolute;
+								top: #{$size / 2};
+								right: 10px;
+								width: calc(100% - #{$size + 20});
+							}
+						}
+
+						& a{
+							display: inline !important;
+							width: fit-content;
+							color: $text;
+							text-decoration: underline;
+						}
+
+						&:last-of-type{
+							
+							&:before{
+								background-color: $primary;
+								color: #fff;
+								content: '\edd2';
+								font-family: 'boxicons';
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&#online{
+
+			& a:not(.bttn){
+				color: $text;
+				text-decoration: underline;
+			}
+		}
+
+		&#contacts{
+
+			padding-bottom: 0;
+
+			& .desktop-map-wrapper{
+
+				position: relative;
+
+				& #map{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: #ccc;
+
+					@media(max-width: 800px){
+						position: relative;
+						aspect-ratio: 5 / 3.5;
+					}
+
+					& .ol-hidden, & .ol-attribution{
+						display: none;
+					}
+
+					& .ol-zoom{
+						position: absolute;
+						top: 20px;
+						right: 20px;
+
+						& button{
+							border: 0;
+							box-shadow: 0 0 0 1px $primary inset;
+							background-color: transparent;
+							width: 40px;
+							height: 40px;
+							border-radius: 50%;
+							color: $primary;
+							display: flex;
+							justify-content: center;
+							margin-bottom: 6px;
+							padding: 0;
+							font-size: 32px;
+							cursor: pointer;
+							transition: background-color .2s;
+
+							&:hover{
+								background-color: rgba($primary, .1);
+							}
+						}
+					}
+				}
+
+				& .container{
+					position: relative;
+					pointer-events: none;
+
+					& #contacts-data{
+
+						width: clamp(350px, 25vw, 500px);
+						pointer-events: all;
+
+						& img{
+							display: block;
+						}
+
+						& .key{
+							color: lighten($text, 20);
+						}
+
+						& .contacts-content{
+							background-color: #fff;
+							padding: clamp(5px, 2vw, 40px);
+
+							& .contacts-block{
+								margin: clamp(20px, 2vw, 40px) 0;
+								line-height: 1.6em;
+
+								&:first-of-type{
+									margin-top: 0;
+								}
+
+								& a:not(.bttn){
+									color: $text;
+									font-size: clamp(18px, 3vw, 22px);
+									line-height: 1.4em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

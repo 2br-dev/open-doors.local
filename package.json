@@ -1,0 +1,39 @@
+{
+  "name": "open-doors.local",
+  "version": "1.0.0",
+  "description": "Layout for open-door event of KubGAU",
+  "main": "index.html",
+  "author": "2BR",
+  "license": "MIT",
+  "scripts": {
+    "start": "clear && gulp watch",
+    "build": "clear && zip release.zip release/* -r -m && unzip -LL ./release.zip && rm release.zip && optimizt ./release/img"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29",
+    "@types/materialize-css": "^1.0.14",
+    "@types/swiper": "^6.0.0",
+    "browser-sync": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "jquery": "^3.7.1",
+    "materialize-css": "^1.0.0",
+    "node-sass": "^9.0.0",
+    "vanilla-lazyload": "^17.8.8"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-typescript": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "swiper": "9.0.0",
+    "webpack": "^5.90.3",
+    "webpack-stream": "^7.0.0"
+  }
+}
