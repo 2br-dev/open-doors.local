@@ -64,6 +64,7 @@ main#main{
 			background-image: url('/img/pattern.svg');
 			background-size: 40vmax auto;
 			color: #fff;
+			padding: 3vmax 0;
 
 			& .underline{
 				border-color: #fff;
@@ -118,7 +119,7 @@ main#main{
 						}
 						
 						& h3{
-							margin-top: 0;
+							margin: 0;
 							font-weight: 400;
 						}
 

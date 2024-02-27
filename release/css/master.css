@@ -6076,6 +6076,10 @@ body .bttn:hover {
     background-color: #ff9a34;
 }
 
+body a:not(.bttn):hover {
+    color: #FF8001 !important;
+}
+
 @keyframes loading {
     to {
         background-position: 300px 100%;
@@ -6345,6 +6349,7 @@ main#main section#program {
     background-image: url("../img/pattern.svg");
     background-size: 40vmax auto;
     color: #fff;
+    padding: 3vmax 0;
 }
 
 main#main section#program .underline {
@@ -6402,7 +6407,7 @@ main#main section#program .program-scroll .program-scroll-entry .ps-info {
 }
 
 main#main section#program .program-scroll .program-scroll-entry .ps-info h3 {
-    margin-top: 0;
+    margin: 0;
     font-weight: 400;
 }
 

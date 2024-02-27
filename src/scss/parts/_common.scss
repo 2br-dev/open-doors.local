@@ -40,6 +40,10 @@ body{
 			background-color: lighten($secondary, 10);
 		}
 	}
+
+	& a:not(.bttn):hover{
+		color: $secondary !important;
+	}
 }
 
 @keyframes loading{

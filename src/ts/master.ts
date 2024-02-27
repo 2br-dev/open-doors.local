@@ -78,7 +78,8 @@ Swiper.use([Mousewheel]);
 			sensitivity: 4
 		},
 		scrollbar: {
-			el: '.program-scrollbar'
+			el: '.program-scrollbar',
+			draggable: true
 		},
 		breakpoints: {
 			300: {
