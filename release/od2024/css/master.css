@@ -6088,19 +6088,19 @@ body main a:not(.bttn):hover {
 
 @font-face {
     font-family: 'Cygre';
-  src: url("/fonts/Cygre-Regular.ttf");
+  src: url("/od2024/fonts/Cygre-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
     font-family: 'Cygre';
-  src: url("/fonts/Cygre-Medium.ttf");
+  src: url("/od2024/fonts/Cygre-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
     font-family: 'Cygre';
-  src: url("/fonts/Cygre-Bold.ttf");
+  src: url("/od2024/fonts/Cygre-Bold.ttf");
   font-weight: bold;
 }
 
