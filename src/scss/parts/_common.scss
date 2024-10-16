@@ -41,8 +41,11 @@ body{
 		}
 	}
 
-	& a:not(.bttn):hover{
-		color: $secondary !important;
+	& main {
+		
+		& a:not(.bttn):hover{
+			color: $secondary !important;
+		}
 	}
 }
 

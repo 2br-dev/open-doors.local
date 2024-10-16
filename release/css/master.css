@@ -6076,7 +6076,7 @@ body .bttn:hover {
     background-color: #ff9a34;
 }
 
-body a:not(.bttn):hover {
+body main a:not(.bttn):hover {
     color: #FF8001 !important;
 }
 
@@ -6139,7 +6139,7 @@ body h3 {
 header {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 20;
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -6177,6 +6177,12 @@ header .container nav .logo-wrapper .burger {
     line-height: 40px;
     font-size: 24px;
     color: #1FAD96;
+    line-height: 45px;
+}
+
+header .container nav .logo-wrapper span {
+    display: flex;
+    align-items: center;
 }
 
 header .container nav .logo-wrapper .logo {
@@ -6189,9 +6195,47 @@ header .container nav .logo-wrapper .logo {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 1550px) {
+    header .container nav .logo-wrapper .logo {
+        aspect-ratio: 3 / 4;
+        background-size: cover;
+    }
+}
+
 @media (max-width: 600px) {
     header .container nav .logo-wrapper .logo {
         height: 40px;
+    }
+}
+
+header .container nav .logo-wrapper .main-site {
+    color: #2F3933;
+    margin-left: clamp(5px, 2vw, 30px);
+    box-shadow: 0 0 0 1px #2F3933 inset;
+    padding: 0 1em;
+    line-height: 2em;
+    display: inline-block;
+    border-radius: 2em;
+    white-space: nowrap;
+}
+
+header .container nav .logo-wrapper .main-site span {
+    display: inline;
+}
+
+@media (max-width: 280px) {
+    header .container nav .logo-wrapper .main-site span {
+        display: none;
+    }
+}
+
+header .container nav .logo-wrapper .main-site:hover {
+    box-shadow: 0 0 0 1px #FF8001 inset;
+}
+
+@media (max-width: 600px) {
+    header .container nav .logo-wrapper .main-site {
+        font-size: 14px;
     }
 }
 
@@ -6200,9 +6244,13 @@ header .container nav ul {
     display: flex;
 }
 
+header .container nav ul li {
+    display: flex;
+    align-items: center;
+}
+
 header .container nav ul li a {
     display: block;
-    line-height: 2em;
     padding: 0 1em;
     border-radius: 1em;
     color: #2F3933;

@@ -20,6 +20,9 @@ Swiper.use([Mousewheel]);
 
 	setProgramLength();
 
+	let date = new Date().getFullYear();
+	document.getElementById('year').innerHTML = date.toString();
+
 	let lazy = new Lazy({
 		callback_loaded: ((el:HTMLElement, instance: ILazyLoadInstance) => {
 			el.classList.add('complete');
@@ -116,10 +119,19 @@ function initMap(){
 	
 	let coords = [38.928472, 45.046795];
 
+	let parkingCoords = [38.929998, 45.044280];
+
 	let style = new ol.style.Style({
 		image: new ol.style.Icon({
 			anchor: [.5, 1],
 			src: "/img/map_marker.png"
+		})
+	});
+
+	let parkingStyle = new ol.style.Style({
+		image: new ol.style.Icon({
+			anchor: [.5, 1],
+			src: "/img/parking_marker.png"
 		})
 	});
 
@@ -128,13 +140,20 @@ function initMap(){
 		geometry: new ol.geom.Point(ol.proj.fromLonLat(coords))
 	});
 
+	let parkingMarker = new ol.Feature({
+		type: 'icon',
+		geometry: new ol.geom.Point(ol.proj.fromLonLat(parkingCoords))
+	});
+
+	marker.setStyle(style);
+	parkingMarker.setStyle(parkingStyle);
+
 	source = new ol.source.Vector({
-		features: [ marker ]
+		features: [ marker, parkingMarker ]
 	});
 
 	let vectorLayer = new ol.layer.Vector({
-		source: source,
-		style: style
+		source: source
 	})
 
 	view = new ol.View({

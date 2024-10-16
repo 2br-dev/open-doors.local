@@ -1,130 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./parts/head.html', {title: "День открытых дверей в КубГАУ"})
-<body>
-	@@include('./parts/header.html')
-	<main id="main">
-		<section id="hero">
-			<div class="container">
-				<div class="row flex vcenter">
-					<div class="col m5 s8 offset-s2 xs12">
-						<div class="base-wrapper">
-							<img data-src="/img/base.svg" alt="День открытых дверей в КубГАУ" width="545" height="580" class="responsive-img lazy">
-							<div class="level" id="l1" data-depth=".5"></div>
-							<div class="level" id="l2" data-depth="1.5"></div>
-							<div class="level" id="l3" data-depth="3"></div>
+	@@include('./parts/head.html', {title: "День открытых дверей в КубГАУ"})
+	<body>
+		@@include('./parts/header.html')
+		<main id="main">
+			<section id="hero">
+				<div class="container">
+					<div class="row flex vcenter">
+						<div class="col m5 s8 offset-s2 xs12">
+							<div class="base-wrapper">
+								<img
+									data-src="/img/base.svg"
+									alt="День открытых дверей в КубГАУ"
+									width="545"
+									height="580"
+									class="responsive-img lazy"
+								/>
+								<div
+									class="level"
+									id="l1"
+									data-depth=".5"
+								></div>
+								<div
+									class="level"
+									id="l2"
+									data-depth="1.5"
+								></div>
+								<div class="level" id="l3" data-depth="3"></div>
+							</div>
+						</div>
+						<div class="col m7 s12">
+							<h1>
+								День открытых дверей
+								<strong>в КубГАУ 19 октября</strong>
+							</h1>
+							<p class="subheader">
+								Бери родителей, зови друзей и мчи изучать
+								необъятную территорию университета с самым
+								большим и удобным кампусом на Юге!
+							</p>
+							<p>
+								<a
+									href="https://b24-b4unfy.bitrix24.site/crm_form_lkdk0/?event_id=274"
+									target="_blank"
+									rel="nofollow"
+									class="bttn"
+									>Регистрация</a
+								>
+							</p>
 						</div>
 					</div>
-					<div class="col m7 s12">
-						<h1>
-							День открытых дверей <strong>в КубГАУ 2 марта</strong>
-						</h1>
+				</div>
+			</section>
+			<section id="about">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<h2>Что тебя ждёт <strong>в этот день</strong></h2>
+						</div>
+						<div class="col l3 m6 s12 margin-bottom">
+							<img
+								data-src="/img/icon-tell.svg"
+								alt="Расскажем"
+								class="responsive-img lazy"
+								width="54"
+								height="54"
+							/>
+							<h3>Расскажем</h3>
+							<p>
+								О карьерных векторах, специальностях
+								и профессиях, которые можно освоить в КубГАУ
+							</p>
+						</div>
+						<div class="col l3 m6 s12 margin-bottom">
+							<img
+								data-src="/img/icon-show.svg"
+								alt="Покажем"
+								class="responsive-img lazy"
+								width="54"
+								height="54"
+							/>
+							<h3>Покажем</h3>
+							<p>
+								Университет изнутри: проведём экскурсии по
+								нашему огромному зелёному кампусу, заглянем
+								в лаборатории, общежития и учебные корпуса
+							</p>
+						</div>
+						<div class="col l3 m6 s12 margin-bottom">
+							<img
+								data-src="/img/icon-help.svg"
+								alt="Поможем"
+								class="responsive-img lazy"
+								width="54"
+								height="54"
+							/>
+							<h3>Поможем</h3>
+							<p>
+								Разобраться с правилами приёма в КубГАУ
+								и познакомим со всеми нюансами подачи документов
+								в 2025 году
+							</p>
+						</div>
+						<div class="col l3 m6 s12 margin-bottom">
+							<img
+								data-src="/img/icon-gift.svg"
+								alt="Подарим"
+								class="responsive-img lazy"
+								width="54"
+								height="54"
+							/>
+							<h3>Подарим</h3>
+							<p>
+								Положительные эмоции, пищу для размышлений
+								и шанс почувствовать себя частью большой,
+								разной, но очень дружной семьи КубГАУ!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="program">
+				<div class="container row">
+					<div class="col s12 scrollbar-wrapper">
+						<h2 class="underline">Программа дня</h2>
 						<p class="subheader">
-							Приглашаем абитуриентов и их родителей лично познакомиться с одним из лучших вузов России и узнать, как поступить правильно
+							19 октября двери Кубанского госагроуниверситета
+							будут открыты для тебя с 9:30
 						</p>
-						<p>
-							<a href="https://b24-b4unfy.bitrix24.site/crm_form_lkdk0/?event_id=112" target="_blank" rel="nofollow" class="bttn">Регистрация</a>
-						</p>
+						<div class="program-scroll">
+							<div class="swiper" id="program-swiper">
+								<div class="swiper-wrapper">
+									@@loop('./parts/program-scroll-entry.html',
+									'./data/program.json')
+								</div>
+							</div>
+						</div>
+						<div class="program-scrollbar"></div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="about">
-			<div class="container">
-				<div class="row">
-					<div class="col s12">
-						<h2>Что вас ждёт <strong>в этот день</strong></h2>
-					</div>
-					<div class="col l3 m6 s12 margin-bottom">
-						<img data-src="/img/icon-tell.svg" alt="Расскажем" class="responsive-img lazy" width="54" height="54">
-						<h3>Расскажем</h3>
-						<p>
-							О карьерных векторах, специальностях и профессиях, которые можно освоить в КубГАУ
-						</p>
-					</div>
-					<div class="col l3 m6 s12 margin-bottom">
-						<img data-src="/img/icon-show.svg" alt="Покажем" class="responsive-img lazy" width="54" height="54">
-						<h3>Покажем</h3>
-						<p>
-							Университет изнутри: проведём экскурсии по нашему 
-							огромному зелёному кампусу, заглянем в лаборатории, общежития и учебные корпуса
-						</p>
-					</div>
-					<div class="col l3 m6 s12 margin-bottom">
-						<img data-src="/img/icon-help.svg" alt="Поможем" class="responsive-img lazy" width="54" height="54">
-						<h3>Поможем</h3>
-						<p>
-							Разобраться с правилами приёма в КубГАУ и познакомим 
-							со всеми нюансами подачи документов в 2024 году
-						</p>
-					</div>
-					<div class="col l3 m6 s12 margin-bottom">
-						<img data-src="/img/icon-gift.svg" alt="Подарим" class="responsive-img lazy" width="54" height="54">
-						<h3>Подарим</h3>
-						<p>
-							Положительные эмоции, пищу для размышлений и сувениры 
-							на память самым активным и заинтересованным участникам
-						</p>
+			</section>
+			<section id="reasons">
+				<div class="container">
+					<div class="row">
+						<div class="col s12">
+							<h2 class="underline">
+								Тебе <strong>точно стоит посетить</strong> день
+								открытых дверей, если:
+							</h2>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="program">
-			<div class="container row">
-				<div class="col s12 scrollbar-wrapper">
-					<h2 class="underline">Программа дня</h2>
-					<p class="subheader">
-						2 марта двери Кубанского госагроуниверситета будут открыты для вас с 9:30
-					</p>
-					<div class="program-scroll">
-						<div class="swiper" id="program-swiper">
-							<div class="swiper-wrapper">
-								@@loop('./parts/program-scroll-entry.html', './data/program.json')
+				<div class="line">
+					<div class="container">
+						<div class="row center-align">
+							<div class="col l4 m6 s6 margin-bottom">
+								<img
+									data-src="/img/future.png"
+									alt="Профессия будущего"
+									width="345"
+									height="335"
+									class="lazy responsive-img"
+								/>
+								<p class="subheader">
+									Мечтаешь стать значимым специалистом
+									в профессии будущего
+								</p>
+							</div>
+							<div class="col l4 m6 s6 margin-bottom">
+								<img
+									data-src="/img/campus.png"
+									alt="Кампус"
+									width="345"
+									height="335"
+									class="lazy responsive-img"
+								/>
+								<p class="subheader">
+									Не гулял по самому большому и зелёному
+									кампусу на Юге
+								</p>
+							</div>
+							<div
+								class="col l4 m6 offset-m3 s6 offset-s3 margin-bottom"
+							>
+								<img
+									data-src="/img/atmosphere.png"
+									alt="Атмосфера"
+									width="345"
+									height="335"
+									class="lazy responsive-img"
+								/>
+								<p class="subheader">
+									Хочешь окунуться в атмосферу студенческой
+									жизни
+								</p>
 							</div>
 						</div>
 					</div>
-					<div class="program-scrollbar"></div>
 				</div>
-			</div>
-		</section>
-		<section id="reasons">
-			<div class="container">
-				<div class="row">
-					<div class="col s12">
-						<h2 class="underline">Тебе <strong>точно стоит посетить</strong> день открытых дверей, если:</h2>
-					</div>
-				</div>
-			</div>
-			<div class="line">
+			</section>
+			<section id="figital" class="promo-card">
 				<div class="container">
-					<div class="row center-align">
-						<div class="col l4 m6 s6 margin-bottom">
-							<img data-src="/img/future.png" alt="Профессия будущего" width="345" height="335"  class="lazy responsive-img">
-							<p class="subheader">Мечтаешь стать значимым специалистом в профессии будущего</p>
-						</div>
-						<div class="col l4 m6 s6 margin-bottom">
-							<img data-src="/img/campus.png" alt="Кампус"  width="345" height="335" class="lazy responsive-img">
-							<p class="subheader">Не гулял по самому большому и зелёному кампусу на Юге</p>
-						</div>
-						<div class="col l4 m6 offset-m3 s6 offset-s3 margin-bottom">
-							<img data-src="/img/atmosphere.png" alt="Атмосфера" width="345" height="335" class="lazy responsive-img">
-							<p class="subheader">Хочешь окунуться в атмосферу студенческой жизни</p>
+					<div class="row figital">
+						<div class="col xl9 l8 m8 s8">
+							<h2>Не пропусти самую активную часть</h2>
+							<p class="subheader">
+								За партией в настолки поделимся студенческим
+								опытом, а заодно сыграем в пинг-понг, шахматы,
+								покидаем дартс, посостязаемся в армреслинге
+								и проведём мастер-класс по гиревому спорту.
+							</p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="figital" class="promo-card">
-			<div class="container">
-				<div class="row figital">
-					<div class="col xl9 l8 m8 s8">
-						<h2>Обязательно загляни на фиджитал-игры</h2>
-						<p class="subheader">Сыграем в настольный теннис и дартс, зарубимся на PlayStation в FIFA и NBA, поделимся студенческим опытом.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="merch" class="promo-card">
+			</section>
+			<!-- <section id="merch" class="promo-card">
 			<div class="container">
 				<div class="row">
 					<div class="col l8 m12">
@@ -145,93 +235,153 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section id="online">
-			<div class="container">
-				<div class="row">
-					<div class="col l8 m7 s12">
-						<h2>А если приехать никак не выходит, <strong>подключись онлайн!</strong></h2>
-						<p>
-							Да-да, мы всё предусмотрели! <a href="https://vk.com/priemkubsau" target="_blank" rel="nofollow">Вступи в группу VK</a>, включи звук и жди ссылку в Сообществе в субботу, 2 марта. 
-							Обещаем прямой эфир и трансляцию без задержек!
-						</p>
-						<p>
-							<a href="https://vk.com/priemkubsau" class="bttn" target="_blank" rel="nofollow">Подписаться</a>
-						</p>
-					</div>
-					<div class="col l4 m5 s12">
-						<img data-src="/img/online.jpg" alt="" class="lazy responsive-img round">
+		</section> -->
+			<section id="online">
+				<div class="container">
+					<div class="row">
+						<div class="col l8 m7 s12">
+							<h2>
+								А если приехать никак не выходит,
+								<strong>подключись онлайн!</strong>
+							</h2>
+							<p>
+								Да-да, мы всё предусмотрели!
+								<a
+									href="https://vk.com/priemkubsau"
+									target="_blank"
+									rel="nofollow"
+									>Вступи в группу VK</a
+								>, включи звук и жди ссылку в Сообществе
+								в субботу, 19 октября. Обещаем прямой эфир
+								и трансляцию без задержек!
+							</p>
+							<p>
+								<a
+									href="https://vk.com/priemkubsau"
+									class="bttn"
+									target="_blank"
+									rel="nofollow"
+									>Подписаться</a
+								>
+							</p>
+						</div>
+						<div class="col l4 m5 s12">
+							<img
+								data-src="/img/online.jpg"
+								alt=""
+								class="lazy responsive-img round"
+							/>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section id="contacts">
-			<div class="container">
-				<h2 class="underline">Контакты</h2>
-			</div>
-			<div class="desktop-map-wrapper">
-				<div id="map"></div>
+			</section>
+			<section id="contacts">
 				<div class="container">
-					<div id="contacts-data">
-						<img width="852" height="479" data-src="/img/contacts_photo.jpg" alt="КубГАУ" class="responsive-img lazy hide-m-down">
-						<div class="contacts-content">
-							<div class="contacts-block">
-								<div class="key">Адрес</div>
-								<div class="value">
-									<a href="https://yandex.ru/maps/-/CDB~vV9G" target="_blank" rel="nofollow">
-										<i class="bx bxs-map"></i>
-										<span>г. Краснодар, ул. Калинина, 13</span>
-									</a>
+					<h2 class="underline">Контакты</h2>
+				</div>
+				<div class="desktop-map-wrapper">
+					<div id="map"></div>
+					<div class="container">
+						<div id="contacts-data">
+							<img
+								width="852"
+								height="479"
+								data-src="/img/contacts_photo.jpg"
+								alt="КубГАУ"
+								class="responsive-img lazy hide-m-down"
+							/>
+							<div class="contacts-content">
+								<div class="contacts-block">
+									<div class="key">Адрес</div>
+									<div class="value">
+										<a
+											href="https://yandex.ru/maps/-/CDB~vV9G"
+											target="_blank"
+											rel="nofollow"
+										>
+											<i class="bx bxs-map"></i>
+											<span
+												>г. Краснодар, ул. Калинина,
+												13</span
+											>
+										</a>
+									</div>
+									<div class="value">
+										<a
+											href="https://yandex.ru/maps/-/CDB~vV9G"
+											target="_blank"
+											rel="nofollow"
+										>
+											<i class="bx bxs-parking"></i>
+											<span
+												>Въезд на бесплатную парковку с
+												улицы Академика Трубилина</span
+											>
+										</a>
+									</div>
 								</div>
-								<div class="value">
-									<a href="https://yandex.ru/maps/-/CDB~vV9G" target="_blank" rel="nofollow">
-										<i class="bx bxs-parking"></i>
-										<span>Въезд на бесплатную парковку с улицы Академика Трубилина</span>
-									</a>
+								<div class="contacts-block">
+									<div class="key">
+										Телефоны приёмной комиссии
+									</div>
+									<div class="value">
+										<a href="tel:+78612215818">
+											<i class="bx bxs-phone"></i>
+											<span>+7 (861) 221-58-18</span>
+										</a>
+									</div>
+									<div class="value">
+										<a href="tel:+78612215485">
+											<i class="bx bxs-phone"></i>
+											<span>+7 (861) 221-54-85</span>
+										</a>
+									</div>
+									<div class="value">
+										<a href="tel:+78612215476">
+											<i class="bx bxs-phone"></i>
+											<span>+7 (861) 221-54-76</span>
+										</a>
+									</div>
 								</div>
-							</div>
-							<div class="contacts-block">
-								<div class="key">Телефоны приёмной комиссии</div>
-								<div class="value">
-									<a href="tel:+78612215818">
-										<i class="bx bxs-phone"></i>
-										<span>+7 (861) 221-58-18</span>
-									</a>
+								<div class="contacts-block">
+									<div class="key">Мы в соц. сетях</div>
+									<div class="value">
+										<a
+											href="https://vk.com/priemkubsau"
+											target="_blank"
+											rel="nofollow"
+										>
+											<i class="bx bxl-vk"></i> <span
+												>ВКонтакте</span
+											>
+										</a>
+										/
+										<a
+											href="https://t.me/priemkubsau"
+											target="_blank"
+											rel="nofollow"
+										>
+											<i class="bx bxl-telegram"></i
+											> <span>Telegram</span>
+										</a>
+									</div>
 								</div>
-								<div class="value">
-									<a href="tel:+78612215485">
-										<i class="bx bxs-phone"></i>
-										<span>+7 (861) 221–54-85</span>
-									</a>
+								<div class="contacts-block">
+									<a
+										target="_blank"
+										rel="nofollow"
+										href="https://b24-b4unfy.bitrix24.site/crm_form_lkdk0/?event_id=112"
+										class="bttn"
+										>Регистрация</a
+									>
 								</div>
-								<div class="value">
-									<a href="tel:+78612215476">
-										<i class="bx bxs-phone"></i>
-										<span>+7 (861) 221-54-76</span>
-									</a>
-								</div>
-							</div>
-							<div class="contacts-block">
-								<div class="key">Мы в соц. сетях</div>
-								<div class="value">
-									<a href="https://vk.com/priemkubsau" target="_blank" rel="nofollow">
-										<i class="bx bxl-vk"></i> <span>ВКонтакте</span>
-									</a> / 
-									<a href="https://t.me/priemkubsau" target="_blank" rel="nofollow">
-										<i class="bx bxl-telegram"></i> <span>Telegram</span>
-									</a>
-								</div>
-							</div>
-							<div class="contacts-block">
-								<a target="_blank" rel="nofollow" href="https://b24-b4unfy.bitrix24.site/crm_form_lkdk0/?event_id=112" class="bttn">Регистрация</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-	</main>
-	@@include('./parts/footer.html')
-	<script src="/js/master.js"></script>
-</body>
+			</section>
+		</main>
+		@@include('./parts/footer.html')
+		<script src="/js/master.js"></script>
+	</body>
 </html>

@@ -2,7 +2,7 @@ header{
     
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 20;
     background-color: rgba(#fff, .8);
     backdrop-filter: blur(10px);
 
@@ -37,6 +37,12 @@ header{
                     line-height: 40px;
                     font-size: 24px;
                     color: $primary;
+                    line-height: 45px;
+                }
+
+                & span{
+                    display: flex;
+                    align-items: center;
                 }
 
                 & .logo{
@@ -49,8 +55,43 @@ header{
                     background-size: contain;
                     background-repeat: no-repeat;
 
+                    @media(max-width: 1550px){
+                        aspect-ratio: 3 / 4;
+                        background-size: cover;
+                    }
+
                     @media(max-width: $small){
                         height: 40px;
+                    }
+                }
+
+                & .main-site{
+                    color: $text;
+                    margin-left: clamp(5px, 2vw, 30px);
+                    box-shadow: 0 0 0 1px $text inset;
+                    padding: 0 1em;
+                    line-height: 2em;
+                    display: inline-block;
+                    border-radius: 2em;
+                    white-space: nowrap;
+
+                    & span{
+                        display: inline;
+                    }
+
+                    @media(max-width: 280px){
+
+                        & span{
+                            display: none;
+                        }
+                    }
+
+                    &:hover{
+                        box-shadow: 0 0 0 1px $secondary inset;
+                    }
+
+                    @media(max-width: $small){
+                        font-size: 14px;
                     }
                 }
 
@@ -68,9 +109,11 @@ header{
 
                 & li{
 
+                    display: flex;
+                    align-items: center;
+
                     & a{
                         display: block;
-                        line-height: 2em;
                         padding: 0 1em;
                         border-radius: 1em;
                         color: $text;
