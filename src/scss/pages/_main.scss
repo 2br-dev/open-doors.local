@@ -177,43 +177,28 @@ main#main{
 			}
 		}
 
-		&#figital{
+		&#dpo{
 
 			& .container{
-				
-				background-color: $secondary;
+				display: block;
+				color: #fff !important;
+				background-color: $primary;
 				color: #fff;
 				border-radius: clamp(5px, 2vw, 16px);
-				background-image: url(/img/figital.png);
-				background-position: right -5% top 25%;
-				background-size: 30% auto;
+				background-image: url(/img/dpo.png);
+				background-position: bottom right;
+				background-size: auto calc(100% + 40px);
 				background-repeat: no-repeat;
+				transition: box-shadow .2s;
 
-				@media(min-width: $extra-large){
-					background-size: 30% auto;
-					background-position: right -80px top 20%;
+				@media (max-width: 1500px){
+					background-position: left 40vw bottom;
 				}
 
-				@media(max-width: $extra-large){
-					background-size: 40% auto;
-					background-position: right -80px top 20%;
-				}
-				
-				@media(max-width: $medium){
-					background-size: 50% auto;
-					background-position: right -80px top 20%;
-				}
-
-				@media(max-width: $small){
-					padding-bottom: 170px;
-					background-position: bottom -120px right -30px;
-					background-size: 400px auto;
-				}
-
-				@media(max-width: $extra-small){
-					background-size: 300px auto;
-					padding-bottom: 130px;
-					background-position: bottom -70px right -30px;
+				@media(max-width: 850px){
+					padding-bottom: 250px;
+					background-size: auto 300px;
+					background-position: bottom center;
 				}
 
 				& .col{
@@ -223,6 +208,10 @@ main#main{
 					& h2{
 						margin-top: 0;
 					}
+				}
+
+				&:hover{
+					box-shadow: 0 4px 24px rgba(black, .3);
 				}
 			}
 		}

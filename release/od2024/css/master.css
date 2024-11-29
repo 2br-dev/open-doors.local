@@ -6504,59 +6504,43 @@ main#main section#reasons img {
     margin: auto;
 }
 
-main#main section#figital .container {
-    background-color: #FF8001;
+main#main section#dpo .container {
+    display: block;
+    color: #fff !important;
+    background-color: #1FAD96;
     color: #fff;
     border-radius: clamp(5px, 2vw, 16px);
-    background-image: url(../img/figital.png);
-    background-position: right -5% top 25%;
-    background-size: 30% auto;
+    background-image: url(../img/dpo.png);
+    background-position: bottom right;
+    background-size: auto calc(100% + 40px);
     background-repeat: no-repeat;
+    transition: box-shadow .2s;
 }
 
-@media (min-width: 1800px) {
-    main#main section#figital .container {
-        background-size: 30% auto;
-        background-position: right -80px top 20%;
-    }
-}
-
-@media (max-width: 1800px) {
-    main#main section#figital .container {
-        background-size: 40% auto;
-        background-position: right -80px top 20%;
+@media (max-width: 1500px) {
+    main#main section#dpo .container {
+        background-position: left 40vw bottom;
     }
 }
 
 @media (max-width: 850px) {
-    main#main section#figital .container {
-        background-size: 50% auto;
-        background-position: right -80px top 20%;
+    main#main section#dpo .container {
+        padding-bottom: 250px;
+        background-size: auto 300px;
+        background-position: bottom center;
     }
 }
 
-@media (max-width: 600px) {
-    main#main section#figital .container {
-        padding-bottom: 170px;
-        background-position: bottom -120px right -30px;
-        background-size: 400px auto;
-    }
-}
-
-@media (max-width: 400px) {
-    main#main section#figital .container {
-        background-size: 300px auto;
-        padding-bottom: 130px;
-        background-position: bottom -70px right -30px;
-    }
-}
-
-main#main section#figital .container .col {
+main#main section#dpo .container .col {
     padding: clamp(5px, 3vw, 30px);
 }
 
-main#main section#figital .container .col h2 {
+main#main section#dpo .container .col h2 {
     margin-top: 0;
+}
+
+main#main section#dpo .container:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 main#main section#merch .container {
