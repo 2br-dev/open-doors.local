@@ -6051,7 +6051,7 @@ body section {
 }
 
 body .underline {
-    border-bottom: 3px solid #1FAD96;
+    border-bottom: 3px solid #000;
 }
 
 body .margin-bottom {
@@ -6059,25 +6059,26 @@ body .margin-bottom {
 }
 
 body .round {
-    border-radius: clamp(5px, 3vw, 16px);
+    border-radius: clamp(10px, 3vw, 40px) 0;
 }
 
 body .bttn {
+    border-radius: 10px;
     display: inline-block;
     white-space: nowrap;
     line-height: 3em;
     padding: 0 3em;
-    background-color: #FF8001;
+    background-color: #FF6C00;
     color: #fff;
     transition: background-color .2s;
 }
 
 body .bttn:hover {
-    background-color: #ff9a34;
+    background-color: #ff8933;
 }
 
 body main a:not(.bttn):hover {
-    color: #FF8001 !important;
+    color: #FF6C00 !important;
 }
 
 @keyframes loading {
@@ -6104,17 +6105,29 @@ body main a:not(.bttn):hover {
   font-weight: bold;
 }
 
+@font-face {
+    font-family: 'TT Travels Text';
+  src: url("/od2024/fonts/TT_Travels_Text_Regular.woff2");
+  font-weight: normal;
+}
+
+@font-face {
+    font-family: 'TT Travels Text';
+  src: url("/od2024/fonts/TT_Travels_Text_Bold.woff2");
+  font-weight: bold;
+}
+
 body {
-    font-family: 'Cygre';
+    font-family: 'TT Travels Text';
     font-size: clamp(16px, 2vw, 18px);
     -webkit-font-smoothing: subpixel-antialiased;
     line-height: 1.6em;
     font-size: clamp(16px, 2vmax, 18px);
-    color: #2F3933;
+    color: #000;
 }
 
 body strong {
-    color: #1FAD96;
+    color: #9DD800;
     font-weight: 700;
 }
 
@@ -6123,7 +6136,7 @@ body .subheader {
 }
 
 body h1 {
-    font-size: clamp(43px, 5vw, 92px);
+    font-size: clamp(43px, 5vw, 64px);
     line-height: 1.1em;
 }
 
@@ -6177,7 +6190,7 @@ header .container nav .logo-wrapper .burger {
     text-align: center;
     line-height: 40px;
     font-size: 24px;
-    color: #1FAD96;
+    color: #9DD800;
     line-height: 45px;
 }
 
@@ -6189,11 +6202,12 @@ header .container nav .logo-wrapper span {
 header .container nav .logo-wrapper .logo {
     display: block;
     height: 55px;
-    aspect-ratio: 4.5 / 1;
+    aspect-ratio: 3 / 1;
     flex-shrink: 0;
-    background-image: url(../img/logo.svg);
+    background-image: url(../img/header_logo.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: left center;
 }
 
 @media (max-width: 1550px) {
@@ -6210,9 +6224,9 @@ header .container nav .logo-wrapper .logo {
 }
 
 header .container nav .logo-wrapper .main-site {
-    color: #2F3933;
+    color: #000;
     margin-left: clamp(5px, 2vw, 30px);
-    box-shadow: 0 0 0 1px #2F3933 inset;
+    box-shadow: 0 0 0 1px #000 inset;
     padding: 0 1em;
     line-height: 2em;
     display: inline-block;
@@ -6231,7 +6245,7 @@ header .container nav .logo-wrapper .main-site span {
 }
 
 header .container nav .logo-wrapper .main-site:hover {
-    box-shadow: 0 0 0 1px #FF8001 inset;
+    box-shadow: 0 0 0 1px #FF6C00 inset;
 }
 
 @media (max-width: 600px) {
@@ -6254,24 +6268,24 @@ header .container nav ul li a {
     display: block;
     padding: 0 1em;
     border-radius: 1em;
-    color: #2F3933;
+    color: #000;
     transition: box-shadow .2s, color .2s;
 }
 
 header .container nav ul li a.outline {
-    box-shadow: 0 0 0 1px #2F3933 inset;
+    box-shadow: 0 0 0 1px #000 inset;
 }
 
 header .container nav ul li a:hover {
-    color: #FF8001;
+    color: #FF6C00;
 }
 
 header .container nav ul li a:hover.outline {
-    box-shadow: 0 0 0 1px #FF8001 inset;
+    box-shadow: 0 0 0 1px #FF6C00 inset;
 }
 
 footer {
-    background-color: #1FAD96;
+    background-color: #0E5A67;
     padding: 4vmax 0;
     color: #fff;
 }
@@ -6282,11 +6296,12 @@ footer a {
 }
 
 footer a.bttn-white, footer a.bttn-outline {
+    border-radius: 10px;
     line-height: 3em;
     display: inline-block;
     padding: 0 2em;
     text-decoration: none;
-    color: #1FAD96;
+    color: #0E5A67;
     background-color: rgba(255, 255, 255, 0.8);
     transition: background-color .2s;
     margin-bottom: 20px;
@@ -6361,25 +6376,48 @@ main#main section#hero .base-wrapper .level {
     width: 100%;
     height: 100%;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 main#main section#hero .base-wrapper .level#l1 {
-    background-image: url(../img/level1.svg);
+    background-image: url(../img/level1_new.svg);
     transform: translateZ(2px) scale(0.9);
 }
 
+@media (max-width: 850px) {
+    main#main section#hero .base-wrapper .level#l1 {
+        background-image: url(../img/level1_new_mobile.svg);
+    }
+}
+
 main#main section#hero .base-wrapper .level#l2 {
-    background-image: url(../img/level2.svg);
+    background-image: url(../img/level2_new.svg);
     transform: translateZ(4px) scale(0.8);
 }
 
+@media (max-width: 850px) {
+    main#main section#hero .base-wrapper .level#l2 {
+        background-image: url(../img/level2_new_mobile.svg);
+    }
+}
+
 main#main section#hero .base-wrapper .level#l3 {
-    background-image: url(../img/level3.svg);
+    background-image: url(../img/level3_new.svg);
     transform: translateZ(6px) scale(0.7);
 }
 
+@media (max-width: 850px) {
+    main#main section#hero .base-wrapper .level#l3 {
+        background-image: url(../img/level3_new_mobile.svg);
+    }
+}
+
+main#main section#about h2 {
+    font-size: clamp(32px, 5vw, 75px);
+}
+
 main#main section#about h3 {
-    color: #1FAD96;
+    color: #0E5A67;
     font-weight: 400;
 }
 
@@ -6394,11 +6432,19 @@ main#main section#about img {
 }
 
 main#main section#program {
-    background-color: #1FAD96;
-    background-image: url("../img/pattern.svg");
-    background-size: 40vmax auto;
+    background-color: #0E5A67;
+    background-image: url("../img/pattern_new.svg");
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: repeat-x;
     color: #fff;
     padding: 3vmax 0;
+}
+
+@media (max-width: 850px) {
+    main#main section#program {
+        background-size: auto 30%;
+    }
 }
 
 main#main section#program .underline {
@@ -6427,7 +6473,7 @@ main#main section#program .program-scroll .program-scroll-entry {
 }
 
 main#main section#program .program-scroll .program-scroll-entry .ps-image img {
-    border-radius: clamp(5px, 2vw, 15px);
+    border-radius: clamp(5px, 2vw, 15px) 0;
     display: block;
 }
 
@@ -6508,27 +6554,28 @@ main#main section#reasons img {
 main#main section#dpo .container {
     display: block;
     color: #fff !important;
-    background-color: #1FAD96;
+    background-color: #FF8001;
     color: #fff;
-    border-radius: clamp(5px, 2vw, 16px);
-    background-image: url(../img/dpo.png);
+    border-radius: clamp(10px, 2vw, 40px) 0;
+    background-image: url(../img/dpo_new.png);
     background-position: bottom right;
     background-size: auto calc(100% + 40px);
     background-repeat: no-repeat;
     transition: box-shadow .2s;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 850px) {
     main#main section#dpo .container {
-        background-position: left 40vw bottom;
+        padding-bottom: 45vw;
+        background-size: 70% auto;
+        background-position: bottom center;
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 600px) {
     main#main section#dpo .container {
-        padding-bottom: 250px;
-        background-size: auto 300px;
-        background-position: bottom center;
+        padding-bottom: 65vw;
+        background-size: 90% auto;
     }
 }
 
@@ -6631,8 +6678,8 @@ main#main section#merch .container .points li {
 
 main#main section#merch .container .points li:before {
     content: counter(li);
-    border: 2px solid #1FAD96;
-    color: #1FAD96;
+    border: 2px solid #9DD800;
+    color: #9DD800;
     height: 48px;
     width: 48px;
     line-height: 48px;
@@ -6645,7 +6692,7 @@ main#main section#merch .container .points li:before {
 main#main section#merch .container .points li:not(:last-of-type):after {
     content: '';
     display: block;
-    border-top: 2px solid #1FAD96;
+    border-top: 2px solid #9DD800;
     position: absolute;
     top: 24px;
     right: 10px;
@@ -6656,19 +6703,19 @@ main#main section#merch .container .points li a {
     display: inline !important;
     width: -moz-fit-content;
     width: fit-content;
-    color: #2F3933;
+    color: #000;
     text-decoration: underline;
 }
 
 main#main section#merch .container .points li:last-of-type:before {
-    background-color: #1FAD96;
+    background-color: #9DD800;
     color: #fff;
     content: '\edd2';
     font-family: 'boxicons';
 }
 
 main#main section#online a:not(.bttn) {
-    color: #2F3933;
+    color: #000;
     text-decoration: underline;
 }
 
@@ -6708,12 +6755,12 @@ main#main section#contacts .desktop-map-wrapper #map .ol-zoom {
 
 main#main section#contacts .desktop-map-wrapper #map .ol-zoom button {
     border: 0;
-    box-shadow: 0 0 0 1px #1FAD96 inset;
+    box-shadow: 0 0 0 1px #9DD800 inset;
     background-color: transparent;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    color: #1FAD96;
+    color: #9DD800;
     display: flex;
     justify-content: center;
     margin-bottom: 6px;
@@ -6724,7 +6771,7 @@ main#main section#contacts .desktop-map-wrapper #map .ol-zoom button {
 }
 
 main#main section#contacts .desktop-map-wrapper #map .ol-zoom button:hover {
-    background-color: rgba(31, 173, 150, 0.1);
+    background-color: rgba(157, 216, 0, 0.1);
 }
 
 main#main section#contacts .desktop-map-wrapper .container {
@@ -6742,7 +6789,7 @@ main#main section#contacts .desktop-map-wrapper .container #contacts-data img {
 }
 
 main#main section#contacts .desktop-map-wrapper .container #contacts-data .key {
-    color: #5d7165;
+    color: #333333;
 }
 
 main#main section#contacts .desktop-map-wrapper .container #contacts-data .contacts-content {
@@ -6760,7 +6807,7 @@ main#main section#contacts .desktop-map-wrapper .container #contacts-data .conta
 }
 
 main#main section#contacts .desktop-map-wrapper .container #contacts-data .contacts-content .contacts-block a:not(.bttn) {
-    color: #2F3933;
+    color: #000;
     font-size: clamp(18px, 3vw, 22px);
     line-height: 1.4em;
 }

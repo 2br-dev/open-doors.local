@@ -16,7 +16,7 @@ body{
 	}
 
 	& .underline{
-		border-bottom: 3px solid $primary;
+		border-bottom: 3px solid #000;
 	}
 
 	& .margin-bottom{
@@ -24,10 +24,11 @@ body{
 	}
 
 	& .round{
-		border-radius: clamp(5px, 3vw, 16px);
+		border-radius: clamp(10px, 3vw, 40px) 0;
 	}
 
 	& .bttn{
+		border-radius: 10px;
 		display: inline-block;
 		white-space: nowrap;
 		line-height: 3em;
