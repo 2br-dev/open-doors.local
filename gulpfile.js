@@ -3,7 +3,7 @@
 const gulp = require("gulp");
 
 //= STYLES ==========================================
-const nodeSass = require("node-sass");
+const nodeSass = require("sass");
 const gulpSass = require("gulp-sass");
 const sass = gulpSass(nodeSass);
 const autoprefixer = require("gulp-autoprefixer");
