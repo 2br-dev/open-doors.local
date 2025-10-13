@@ -177,6 +177,8 @@ function initMap(){
 		view: view
 	});
 
+	map.behaviors.disable('scrollZoom');
+
 	// Смещение центра карты
 	correctCenter();
 
