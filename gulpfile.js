@@ -35,7 +35,7 @@ gulp.task("scss", () => {
 		.pipe(autoprefixer())
 		.pipe(replace("/img", "../img"))
 		.pipe(cssbeautify())
-		.pipe(gulp.dest("./release/od2024/css"))
+		.pipe(gulp.dest("./release/dod2026/css"))
 		.pipe(sync.stream());
 });
 
@@ -59,7 +59,7 @@ gulp.task("java", () => {
 	return gulp
 		.src("./src/ts/master.ts")
 		.pipe(webpack(require("./webpack.config.js")))
-		.pipe(gulp.dest("release/od2024/js/"))
+		.pipe(gulp.dest("release/dod2026/js/"))
 		.pipe(sync.stream());
 });
 

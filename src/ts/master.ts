@@ -124,14 +124,14 @@ function initMap(){
 	let style = new ol.style.Style({
 		image: new ol.style.Icon({
 			anchor: [.5, 1],
-			src: "/od2024/img/map_marker.png"
+			src: "/dod2026/img/map_marker.png"
 		})
 	});
 
 	let parkingStyle = new ol.style.Style({
 		image: new ol.style.Icon({
 			anchor: [.5, 1],
-			src: "/od2024/img/parking_marker.png"
+			src: "/dod2026/img/parking_marker.png"
 		})
 	});
 
