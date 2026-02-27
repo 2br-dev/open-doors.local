@@ -26,29 +26,29 @@ main#main{
 					background-repeat: no-repeat;
 
 					&#l1{
-						background-image: url(/img/level1_new.svg);
+						background-image: url(../img/level1_new.svg);
 						transform: translateZ(2px) scale(.9);
 						
 						@media(max-width: $medium){
-							background-image: url(/img/level1_new_mobile.svg);
+							background-image: url(../img/level1_new_mobile.svg);
 						}
 					}
 
 					&#l2{
-						background-image: url(/img/level2_new.svg);
+						background-image: url(../img/level2_new.svg);
 						transform: translateZ(4px) scale(.8);
 
 						@media(max-width: $medium){
-							background-image: url(/img/level2_new_mobile.svg);
+							background-image: url(../img/level2_new_mobile.svg);
 						}
 					}
 					
 					&#l3{
-						background-image: url(/img/level3_new.svg);
+						background-image: url(../img/level3_new.svg);
 						transform: translateZ(6px) scale(.7);
 
 						@media(max-width: $medium){
-							background-image: url(/img/level3_new_mobile.svg);
+							background-image: url(../img/level3_new_mobile.svg);
 						}
 					}
 				}
@@ -183,7 +183,7 @@ main#main{
 		&#reasons{
 
 			& .line{
-				background-image: url(/img/reasons_bg.svg);
+				background-image: url(../img/reasons_bg.svg);
 				background-position: top center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -208,7 +208,7 @@ main#main{
 				background-color: #FF8001;
 				color: #fff;
 				border-radius: clamp(10px, 2vw, 40px) 0;
-				background-image: url(/img/dpo_new.png);
+				background-image: url(../img/dpo_new.png);
 				background-position: bottom right;
 				background-size: auto calc(100% + 40px);
 				background-repeat: no-repeat;
@@ -247,7 +247,7 @@ main#main{
 				border: 1px solid #ccc;
 				border-radius: clamp(5px, 2vw, 16px);
 				padding: clamp(5px, 3vw, 30px);
-				background-image: url(/img/merch.jpg);
+				background-image: url(../img/merch.jpg);
 				background-size: 35% auto;
 				background-repeat: no-repeat;
 				background-position: bottom right -2px;
@@ -429,6 +429,35 @@ main#main{
 
 						width: clamp(350px, 25vw, 500px);
 						pointer-events: all;
+
+						& a{
+							
+							& i{
+	
+								&.icon{
+	
+									display: inline-block;
+									height: 1em;
+									width: 1em;
+									transform: translateY(.1em);
+									background-size: cover;
+									background-color: black;
+	
+									&.max{
+										mask: url('../img/max.svg');
+									}
+									
+									&.vk{
+										mask: url('../img/vk-new.svg');
+									}
+								}
+							}
+
+							&:hover i.icon{
+								background-color: $secondary;
+							}
+						}
+
 
 						& img{
 							display: block;

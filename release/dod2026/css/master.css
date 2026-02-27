@@ -6432,7 +6432,7 @@ main#main section#about img {
 
 main#main section#program {
     background-color: #0E5A67;
-    background-image: url("../img/pattern_new.svg");
+    background-image: url("/img/pattern_new.svg");
     background-size: 100% auto;
     background-position: bottom center;
     background-repeat: repeat-x;
@@ -6781,6 +6781,29 @@ main#main section#contacts .desktop-map-wrapper .container {
 main#main section#contacts .desktop-map-wrapper .container #contacts-data {
     width: clamp(350px, 25vw, 500px);
     pointer-events: all;
+}
+
+main#main section#contacts .desktop-map-wrapper .container #contacts-data a i.icon {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    transform: translateY(0.1em);
+    background-size: cover;
+    background-color: black;
+}
+
+main#main section#contacts .desktop-map-wrapper .container #contacts-data a i.icon.max {
+    -webkit-mask: url("../img/max.svg");
+    mask: url("../img/max.svg");
+}
+
+main#main section#contacts .desktop-map-wrapper .container #contacts-data a i.icon.vk {
+    -webkit-mask: url("../img/vk-new.svg");
+    mask: url("../img/vk-new.svg");
+}
+
+main#main section#contacts .desktop-map-wrapper .container #contacts-data a:hover i.icon {
+    background-color: #FF6C00;
 }
 
 main#main section#contacts .desktop-map-wrapper .container #contacts-data img {

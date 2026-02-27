@@ -33,7 +33,6 @@ gulp.task("scss", () => {
 			})
 		)
 		.pipe(autoprefixer())
-		.pipe(replace("/img", "../img"))
 		.pipe(cssbeautify())
 		.pipe(gulp.dest("./release/dod2026/css"))
 		.pipe(sync.stream());
