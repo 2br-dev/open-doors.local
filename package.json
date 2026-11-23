@@ -6,7 +6,7 @@
   "author": "2BR",
   "license": "MIT",
   "scripts": {
-    "start": "clear && gulp watch",
+    "start": "cls && gulp watch",
     "build": "clear && zip release.zip release/* -r -m && unzip -LL ./release.zip && rm release.zip && optimizt ./release/img"
   },
   "devDependencies": {

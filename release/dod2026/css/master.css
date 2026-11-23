@@ -6088,31 +6088,31 @@ body main a:not(.bttn):hover {
 
 @font-face {
     font-family: "Cygre";
-  src: url("/dod2026/fonts/Cygre-Regular.ttf");
+  src: url("../fonts/Cygre-Regular.ttf");
   font-weight: normal;
 }
 
 @font-face {
     font-family: "Cygre";
-  src: url("/dod2026/fonts/Cygre-Medium.ttf");
+  src: url("../fonts/Cygre-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
     font-family: "Cygre";
-  src: url("/dod2026/fonts/Cygre-Bold.ttf");
+  src: url("../fonts/Cygre-Bold.ttf");
   font-weight: bold;
 }
 
 @font-face {
     font-family: "TT Travels Text";
-  src: url("/dod2026/fonts/TT_Travels_Text_Regular.woff2");
+  src: url("../fonts/TT_Travels_Text_Regular.woff2");
   font-weight: normal;
 }
 
 @font-face {
     font-family: "TT Travels Text";
-  src: url("/dod2026/fonts/TT_Travels_Text_Bold.woff2");
+  src: url("../fonts/TT_Travels_Text_Bold.woff2");
   font-weight: bold;
 }
 
@@ -6356,6 +6356,12 @@ main#main section {
     padding: 4vmax 0;
 }
 
+@media (max-width: 850px) {
+    main#main section#hero .hero-wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
 main#main section#hero .base-wrapper {
     width: 100%;
     position: relative;
@@ -6365,10 +6371,12 @@ main#main section#hero .base-wrapper {
 
 main#main section#hero .base-wrapper img {
     width: 100%;
-    position: static !important;
+    position: relative !important;
+    z-index: 2;
 }
 
 main#main section#hero .base-wrapper .level {
+    position: relative;
     position: absolute;
     top: 0;
     left: 0;
@@ -6376,39 +6384,130 @@ main#main section#hero .base-wrapper .level {
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: -1;
+}
+
+main#main section#hero .base-wrapper .level .bubble {
+    position: absolute;
+    padding: 0.8em 1em;
+    border-radius: 0.8rem;
+    color: #fff;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    max-width: 42%;
+    font-size: clamp(8px, 2.5vw, 24px);
+    line-height: 1.4em;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+@media (min-width: 850px) {
+    main#main section#hero .base-wrapper .level .bubble {
+        font-size: clamp(12px, 1.1vw, 24px);
+        max-width: 35%;
+    }
+}
+
+main#main section#hero .base-wrapper .level .bubble.b-orange {
+    background-image: radial-gradient(circle at top left, #ffcf40, #FF6C00);
+    right: 0%;
+    top: 15%;
+}
+
+@media (max-width: 850px) {
+    main#main section#hero .base-wrapper .level .bubble.b-orange {
+        width: 220px;
+    }
+}
+
+@media (max-width: 650px) {
+    main#main section#hero .base-wrapper .level .bubble.b-orange {
+        top: -5%;
+        max-width: unset;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+}
+
+main#main section#hero .base-wrapper .level .bubble.b-violet {
+    background-image: radial-gradient(circle at left bottom, #AC95FF, #8131FF);
+    bottom: 40%;
+}
+
+main#main section#hero .base-wrapper .level .bubble.b-green {
+    background-color: #0e5a67;
+    right: 10%;
+    bottom: 10%;
+}
+
+@media (max-width: 850px) {
+    main#main section#hero .base-wrapper .level .bubble.b-green {
+        width: 240px;
+    }
+}
+
+main#main section#hero .base-wrapper .level .bubble.ball {
+    width: 300px;
+    height: 300px;
+    background-image: url("../img/ball.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 25%;
+    left: 15%;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+}
+
+main#main section#hero .base-wrapper .level .bubble.spinner {
+    width: 220px;
+    max-width: 25vw;
+    aspect-ratio: 3/4;
+    background-image: url("../img/spinning.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 45%;
+    right: 0;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    transform: scale(1.3) translateX(20%);
+}
+
+@media (max-width: 600px) {
+    main#main section#hero .base-wrapper .level .bubble.spinner {
+        right: 0;
+        top: 35%;
+        transform: none;
+    }
 }
 
 main#main section#hero .base-wrapper .level#l1 {
-    background-image: url(../img/level1_new.svg);
     transform: translateZ(2px) scale(0.9);
-}
-
-@media (max-width: 850px) {
-    main#main section#hero .base-wrapper .level#l1 {
-        background-image: url(../img/level1_new_mobile.svg);
-    }
+    z-index: 2;
 }
 
 main#main section#hero .base-wrapper .level#l2 {
-    background-image: url(../img/level2_new.svg);
     transform: translateZ(4px) scale(0.8);
-}
-
-@media (max-width: 850px) {
-    main#main section#hero .base-wrapper .level#l2 {
-        background-image: url(../img/level2_new_mobile.svg);
-    }
+    z-index: 2;
 }
 
 main#main section#hero .base-wrapper .level#l3 {
-    background-image: url(../img/level3_new.svg);
     transform: translateZ(6px) scale(0.7);
+    z-index: 2;
 }
 
-@media (max-width: 850px) {
-    main#main section#hero .base-wrapper .level#l3 {
-        background-image: url(../img/level3_new_mobile.svg);
-    }
+main#main section#hero .base-wrapper .level#l4 {
+    transform: translateZ(0.5px) scale(1.2);
+    z-index: 2;
+}
+
+main#main section#hero .base-wrapper .level#l5 {
+    transform: translateZ(1px) scale(0.7);
+    z-index: -2;
+    transform: translateZ(-2px);
 }
 
 main#main section#about h2 {
@@ -6432,7 +6531,7 @@ main#main section#about img {
 
 main#main section#program {
     background-color: #0E5A67;
-    background-image: url("/img/pattern_new.svg");
+    background-image: url("../img/pattern_new.svg");
     background-size: 100% auto;
     background-position: bottom center;
     background-repeat: repeat-x;
@@ -6450,10 +6549,17 @@ main#main section#program .underline {
     border-color: #fff;
 }
 
+main#main section#program #program-swiper {
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
 main#main section#program .program-scroll {
     padding: 10px;
     padding-bottom: 50px;
     box-sizing: border-box;
+    height: -moz-fit-content;
+    height: fit-content;
 }
 
 main#main section#program .program-scroll .program-scroll-entry {
@@ -6553,7 +6659,7 @@ main#main section#reasons img {
 main#main section#dpo .container {
     display: block;
     color: #fff !important;
-    background-color: #FF8001;
+    background-color: #ff8001;
     color: #fff;
     border-radius: clamp(10px, 2vw, 40px) 0;
     background-image: url(../img/dpo_new.png);
@@ -6720,6 +6826,7 @@ main#main section#online a:not(.bttn) {
 
 main#main section#contacts {
     padding-bottom: 0;
+    overflow: clip;
 }
 
 main#main section#contacts .desktop-map-wrapper {
